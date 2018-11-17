@@ -1,84 +1,84 @@
 # -*- coding: utf-8 -*-
 
-class Animals:
-    def __init__(self, name, weight, voice, color, _class):
+class animal:
+    def __init__(self, name, weight, voice, color, kind):
         self.name = name
         self.weight = weight
         self.voice = voice
         self.color = color
-        self._class = _class
+        self.kind = kind
     def give_food(self):
         print('Спасибо за еду')
     def give_drink(self):
         print('Спасибо за воду')
 
-class Beeves:
+class beeve:
     def take_milk(self):
         print('дала молоко')
-    def _cut(self):
+    def cut(self):
         print('побрит налысо')
 
-class Home_Birds:
+class home_birds:
     def take_eggs(self):
         print('яйца собраны')
     def need_cut_wings(self):
         print('крылья подрезаны')
 
-class Gooses(Animals, Home_Birds):
+class goose(animal, home_birds):
     character = 'Спокойный'
     sentiment = 'Улыбчивый'
     speed = 'Медленный'
 
-class Cows(Animals, Beeves):
+class cow(animal, beeve):
     exp = 'Даю молоко'
 
-class Sheeps(Animals, Beeves):
+class sheep(animal, beeve):
     pass
 
-class Chickens(Animals, Home_Birds):
+class chicken(animal, home_birds):
     pass
 
-class Goats(Animals, Beeves):
+class goat(animal, beeve):
     pass
 
-class Ducks(Animals, Home_Birds):
+class duck(animal, home_birds):
     pass
 
-goose_Grey = Gooses('Серый', 5, 'Га-га', 'Серый', 'Гусь')
-goose_White = Gooses('Белый', 4.2, 'Га-га', 'Белый', 'Гусь')
-cow_Mashka = Cows('Манька', 100, 'Му-му', 'Бурый', 'Корова')
-sheep_Barashek = Sheeps('Барашек', 100, 'Бе-бе', 'Серо-бурый', 'Овца')
-sheep_Kudryashka = Sheeps('Кудрявый', 57, 'Бе-бе', 'Малиновый', 'Овца')
-chicken_Koko = Chickens('Ко-ко', 3.2, 'Ко-ко', 'Пестрый', 'Курица')
-chicken_Kukareku = Chickens('Кукареку', 3.4, 'Ко-ко', 'Сизый', 'Курица')
-goat_Roga = Goats('Рога', 42, 'Ме-ме', 'Черный', 'Коза')
-goat_Kopyta = Goats('Копыта', 43, 'Ме-ме', 'Непонятный', 'Коза')
-duck_Kryakva = Ducks('Кряква', 4.2, 'Кря-кря', 'Фиолетовый', 'Утка')
+goose_grey = goose('Серый', 5, 'Га-га', 'Серый', 'Гусь')
+goose_white = goose('Белый', 4.2, 'Га-га', 'Белый', 'Гусь')
+cow_mashka = cow('Манька', 100, 'Му-му', 'Бурый', 'Корова')
+sheep_barashek = sheep('Барашек', 100, 'Бе-бе', 'Серо-бурый', 'Овца')
+sheep_kudryashka = sheep('Кудрявый', 57, 'Бе-бе', 'Малиновый', 'Овца')
+chicken_koko = chicken('Ко-ко', 3.2, 'Ко-ко', 'Пестрый', 'Курица')
+chicken_kukareku = chicken('Кукареку', 3.4, 'Ко-ко', 'Сизый', 'Курица')
+goat_roga = goat('Рога', 42, 'Ме-ме', 'Черный', 'Коза')
+goat_kopyta = goat('Копыта', 43, 'Ме-ме', 'Непонятный', 'Коза')
+duck_kryakva = duck('Кряква', 4.2, 'Кря-кря', 'Фиолетовый', 'Утка')
 
-animals_list = [goose_Grey, goose_White, cow_Mashka, sheep_Barashek, sheep_Kudryashka, chicken_Koko, chicken_Kukareku, \
-                goat_Roga, goat_Kopyta, duck_Kryakva]
-_beeves = [cow_Mashka, sheep_Barashek, sheep_Kudryashka, goat_Roga, goat_Kopyta]
-_home_birds = [goose_Grey, goose_White, chicken_Koko, chicken_Kukareku, duck_Kryakva]
+animals_list = [goose_grey, goose_white, cow_mashka, sheep_barashek, sheep_kudryashka, chicken_koko, chicken_kukareku, \
+                goat_roga, goat_kopyta, duck_kryakva]
+beeve_list = [cow_mashka, sheep_barashek, sheep_kudryashka, goat_roga, goat_kopyta]
+home_birds_list = [goose_grey, goose_white, chicken_koko, chicken_kukareku, duck_kryakva]
 
-def _weight():
-    weights = {goose_White.name: goose_White.weight, goose_Grey.name: goose_Grey.weight, \
-               cow_Mashka.name: cow_Mashka.weight, sheep_Barashek.name: sheep_Barashek.weight, \
-               sheep_Kudryashka.name: sheep_Kudryashka.weight, chicken_Koko.name: chicken_Koko.weight, \
-               chicken_Kukareku.name: chicken_Kukareku.weight, goat_Roga.name: goat_Roga.weight, \
-               goat_Kopyta.name: goat_Kopyta.weight, duck_Kryakva.name: duck_Kryakva.weight}
+def weight():
+    weights = {goose_white.name: goose_white.weight, goose_grey.name: goose_grey.weight, \
+               cow_mashka.name: cow_mashka.weight, sheep_barashek.name: sheep_barashek.weight, \
+               sheep_kudryashka.name: sheep_kudryashka.weight, chicken_koko.name: chicken_koko.weight, \
+               chicken_kukareku.name: chicken_kukareku.weight, goat_roga.name: goat_roga.weight, \
+               goat_kopyta.name: goat_kopyta.weight, duck_kryakva.name: duck_kryakva.weight}
     sum_weight = round(sum(weights.values()), 1)
     print('Суммарный вес всех животных ' + str(sum_weight) + ' кг.')
-    _max = 0
+    max_value = 0
     for name, value in weights.items():
-        if value > _max:
-            _max = value
+        if value > max_value:
+            max_value = value
     for name, value in weights.items():
-        if value == _max:
-            print('Наибольший вес ' + str(_max) + ' кг. имеет ' + name)
+        if value == max_value:
+            print('Наибольший вес ' + str(max_value) + ' кг. имеет ' + name)
 
-def _choose_animal():
+def choose_animal():
     for index in range(1, len(animals_list) + 1):
-        print(str(index) + ' ' + animals_list[index - 1]._class + ', зовут ' + animals_list[index - 1].name)
+        print(str(index) + ' ' + animals_list[index - 1].kind + ', зовут ' + animals_list[index - 1].name)
     while 1:
         ent = input('Выбери зверушку из списка (номер): ')
         if not ent.isnumeric() or not 1 <= int(ent) <= len(animals_list):
@@ -86,16 +86,16 @@ def _choose_animal():
         else:
             current_index = int(ent)
             break
-    print('Ты подошел к зверушке ' + animals_list[current_index - 1]._class + ' ' + animals_list[
+    print('Ты подошел к зверушке ' + animals_list[current_index - 1].kind + ' ' + animals_list[
         current_index - 1].name)
     return current_index
 
 while 1:
-    _key = input('Для просмотра команд, нажмите [h], для выхода - [q]\n')
-    if _key == 'q':
+    key = input('Для просмотра команд, нажмите [h], для выхода - [q]\n')
+    if key == 'q':
         print('Bye ...\n------------------')
         break
-    elif _key == 'h':
+    elif key == 'h':
         print('''a: всех посмотреть
 wt: вывести суммарный вес животных и самого тяжелого
 f: накормить
@@ -104,50 +104,50 @@ ct: побрить
 m: подоить
 e: собрать яйца
 cw: обрезать крылья''')
-    elif _key == 'a':
+    elif key == 'a':
         for animal in animals_list:
-            print('Вид ' + animal._class + '. Зовут: ' + animal.name + ', весит: ' + str(animal.weight) + 'кг' + ', язык: ' \
+            print('Вид ' + animal.kind + '. Зовут: ' + animal.name + ', весит: ' + str(animal.weight) + 'кг' + ', язык: ' \
       + animal.voice + ', национальность: ' + animal.color)
-    elif _key == 'wt':
-        _weight()
-    elif _key == 'f':
+    elif key == 'wt':
+        weight()
+    elif key == 'f':
         print('Кого нужно накормить ?')
-        index = _choose_animal()
+        index = choose_animal()
         print(animals_list[index - 1].name + ':')
         animals_list[index - 1].give_food()
-    elif _key == 'w':
+    elif key == 'w':
         print('Кого нужно напоить ?')
-        index = _choose_animal()
+        index = choose_animal()
         print(animals_list[index - 1].name + ':')
         animals_list[index - 1].give_drink()
-    elif _key == 'ct':
+    elif key == 'ct':
         print('Кого нужно обрить ?')
-        index = _choose_animal()
-        if not animals_list[index - 1] in _beeves:
+        index = choose_animal()
+        if not animals_list[index - 1] in beeve_list:
             print('Птичку брить наголо нельзя, можно только обрезать крылья ☺')
         else:
             print('Зверек ' + animals_list[index - 1].name, end=' ')
-            animals_list[index - 1]._cut()
-    elif _key == 'cw':
+            animals_list[index - 1].cut()
+    elif key == 'cw':
         print('Кому нужно обрезать крылья ?')
-        index = _choose_animal()
-        if not animals_list[index - 1] in _home_birds:
+        index = choose_animal()
+        if not animals_list[index - 1] in home_birds_list:
             print('У парнокопытных нет крыльев, идите к птичкам ☺')
         else:
             print('У птички ' + animals_list[index - 1].name, end=' ')
             animals_list[index - 1].need_cut_wings()
-    elif _key == 'm':
+    elif key == 'm':
         print('Кого подоить ?')
-        index = _choose_animal()
-        if not animals_list[index - 1] in _beeves:
+        index = choose_animal()
+        if not animals_list[index - 1] in beeve_list:
             print('Птицы молоко не дают')
         else:
             print('Зверек ' + animals_list[index - 1].name, end=' ')
             animals_list[index - 1].take_milk()
-    elif _key == 'e':
+    elif key == 'e':
         print('У кого собрать яйца ?')
-        index = _choose_animal()
-        if not animals_list[index - 1] in _home_birds:
+        index = choose_animal()
+        if not animals_list[index - 1] in home_birds_list:
             print('Парнокопытные не несут яиц')
         else:
             print('У птицы ' + animals_list[index - 1].name, end=' ')
