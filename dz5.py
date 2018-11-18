@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-class animal:
+class Animal:
     def __init__(self, name, weight, voice, color, kind):
         self.name = name
         self.weight = weight
@@ -12,48 +12,48 @@ class animal:
     def give_drink(self):
         print('Спасибо за воду')
 
-class beeve:
+class Beeve:
     def take_milk(self):
         print('дала молоко')
     def cut(self):
         print('побрит налысо')
 
-class home_birds:
+class Home_birds:
     def take_eggs(self):
         print('яйца собраны')
     def need_cut_wings(self):
         print('крылья подрезаны')
 
-class goose(animal, home_birds):
+class Goose(Animal, Home_birds):
     character = 'Спокойный'
     sentiment = 'Улыбчивый'
     speed = 'Медленный'
 
-class cow(animal, beeve):
+class Cow(Animal, Beeve):
     exp = 'Даю молоко'
 
-class sheep(animal, beeve):
+class Sheep(Animal, Beeve):
     pass
 
-class chicken(animal, home_birds):
+class Chicken(Animal, Home_birds):
     pass
 
-class goat(animal, beeve):
+class Goat(Animal, Beeve):
     pass
 
-class duck(animal, home_birds):
+class Duck(Animal, Home_birds):
     pass
 
-goose_grey = goose('Серый', 5, 'Га-га', 'Серый', 'Гусь')
-goose_white = goose('Белый', 4.2, 'Га-га', 'Белый', 'Гусь')
-cow_mashka = cow('Манька', 100, 'Му-му', 'Бурый', 'Корова')
-sheep_barashek = sheep('Барашек', 100, 'Бе-бе', 'Серо-бурый', 'Овца')
-sheep_kudryashka = sheep('Кудрявый', 57, 'Бе-бе', 'Малиновый', 'Овца')
-chicken_koko = chicken('Ко-ко', 3.2, 'Ко-ко', 'Пестрый', 'Курица')
-chicken_kukareku = chicken('Кукареку', 3.4, 'Ко-ко', 'Сизый', 'Курица')
-goat_roga = goat('Рога', 42, 'Ме-ме', 'Черный', 'Коза')
-goat_kopyta = goat('Копыта', 43, 'Ме-ме', 'Непонятный', 'Коза')
-duck_kryakva = duck('Кряква', 4.2, 'Кря-кря', 'Фиолетовый', 'Утка')
+goose_grey = Goose('Серый', 5, 'Га-га', 'Серый', 'Гусь')
+goose_white = Goose('Белый', 4.2, 'Га-га', 'Белый', 'Гусь')
+cow_mashka = Cow('Манька', 100, 'Му-му', 'Бурый', 'Корова')
+sheep_barashek = Sheep('Барашек', 100, 'Бе-бе', 'Серо-бурый', 'Овца')
+sheep_kudryashka = Sheep('Кудрявый', 57, 'Бе-бе', 'Малиновый', 'Овца')
+chicken_koko = Chicken('Ко-ко', 3.2, 'Ко-ко', 'Пестрый', 'Курица')
+chicken_kukareku = Chicken('Кукареку', 3.4, 'Ко-ко', 'Сизый', 'Курица')
+goat_roga = Goat('Рога', 42, 'Ме-ме', 'Черный', 'Коза')
+goat_kopyta = Goat('Копыта', 43, 'Ме-ме', 'Непонятный', 'Коза')
+duck_kryakva = Duck('Кряква', 4.2, 'Кря-кря', 'Фиолетовый', 'Утка')
 
 animals_list = [goose_grey, goose_white, cow_mashka, sheep_barashek, sheep_kudryashka, chicken_koko, chicken_kukareku, \
                 goat_roga, goat_kopyta, duck_kryakva]
